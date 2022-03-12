@@ -1,0 +1,161 @@
+
+/*--ШРИФТЫ------------------------------------------------------------------------------------------------------------------ */
+
+
+/*--ОБНУЛЕНИЕ--------------------------------------------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img { 
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+	font-size: inherit;
+}
+/*--Общие блоки------------------------------------------------------------------------------------------------------------- */
+html,
+body {
+    height: 100%;
+}
+/* .wrapper {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/*-wrapper---------------------------------------------------------------------------------------------- */
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid #000;
+    margin: auto;
+}
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url('/assets/img/dino.png');
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url('/assets/img/cactus.png');
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: cactusMov 2s infinite linear;
+}
+
+@keyframes cactusMov {
+    0%{
+        left: 580px;
+    }
+    100%{
+        left:-20px;
+    }
+}
+
+.jump {
+    animation: jump 0.3s linear;
+}
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 100px;
+    }
+    50% {
+        top: 50px;
+    }
+    80% {
+        top: 100px;
+    }
+    100% {
+        top: 150px;
+    }
+}
+/*--footer------------------------------------------------------------------------------------------------------------------ */
+.footer {
+    margin-top: 50px;
+}
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foter-data {
+    display: flex;
+    color: #000000;
+    font-size: 25px;
+}
+.foter-data > * {
+    margin: 0px 20px;
+}
+.symbol {
+}
+.year {
+}
+.github-student {
+    cursor: pointer;
+    transition: 0.5s;
+}
+.github-student:hover {
+    color: rgb(252, 157, 102);
+}
+.rss {
+    filter: invert(0%) sepia(7%) saturate(7473%) hue-rotate(201deg) brightness(95%) contrast(95%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rss img {
+    width: 200px;
+    height: 50px;
+}
+.rss:hover {
+    filter: invert(81%) sepia(61%) saturate(3033%) hue-rotate(318deg) brightness(108%) contrast(98%);
+}
+
+@media (max-width: 768px) {
+    .header__logo {
+        font-size: 25px;
+    }
+    .header__search {
+        width: 130px;
+    }
+    .foter-data {
+        font-size: 15px;
+    }
+    .foter-data > * {
+        margin: 0px 10px;
+    }
+    .rss img {
+        width: 100px;
+        height: 50px;
+    }
+}
